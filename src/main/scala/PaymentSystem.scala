@@ -32,9 +32,9 @@ class PaymentSystem {
   def listPaymentMethods(): List[PaymentMethod] = paymentMethods
 
   // to process payment
-  def processPayment(paymentMethod: PaymentMethod, amount: Double): Unit = {
+  def processPayment(paymentMethod: PaymentMethod, amount: Double): String = {
     if (paymentMethods.contains(paymentMethod))
-      println(s"Payment processed of amount $amount thru your ${paymentMethod.name}")
-    else println("Payment failed")
+      s"Payment processed of amount $amount thru your ${paymentMethod.name}"
+    else "Payment failed"
   }
 }

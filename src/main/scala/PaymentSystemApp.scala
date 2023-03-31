@@ -20,9 +20,9 @@ object PaymentSystemApp extends App {
   paymentSystem.addPaymentMethod(upi)
 
   // Process a payment
-  paymentSystem.processPayment(creditCard, 100.0)
-  paymentSystem.processPayment(upi, 50.0)
-  paymentSystem.processPayment(payPal, 150.0)
+  println(paymentSystem.processPayment(creditCard, 100.0))
+  println(paymentSystem.processPayment(upi, 50.0))
+  println(paymentSystem.processPayment(payPal, 150.0))
 
   // List all payment methods
   val paymentMethods = paymentSystem.listPaymentMethods()
